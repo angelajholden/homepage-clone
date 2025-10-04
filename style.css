@@ -1,0 +1,210 @@
+/*
+.figtree-<uniquifier> {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.gilda-display-regular {
+  font-family: "Gilda Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+:root {
+	--white: #fff;
+	--black: #222;
+	--gray: #eaeaea;
+	--lt-gray: #f8f8f8;
+	--navy: #022859; /*all*/
+	--yellow: #f2c36b; /*accent only*/
+	--gold: #bf8339; /*large only*/
+	--tan: #8c7669; /*large only*/
+	--maroon: #732020; /*all*/
+	--min-large: 1.16625rem; /*18.66px*/
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*::before,
+*::after,
+* {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	font-family: "Figtree", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 100%;
+	line-height: 1.65;
+	color: var(--black);
+	background-color: var(--white);
+}
+
+figure {
+	margin: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+svg {
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	fill: var(--black);
+	stroke: var(--black);
+}
+
+button {
+	border: none;
+	background-color: transparent;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	color: var(--maroon);
+	text-decoration-color: transparent;
+	text-decoration-thickness: 3px;
+	text-underline-offset: 3px;
+	transition: text-decoration-color 300ms ease-in-out;
+}
+
+a:focus,
+a:hover,
+a:active {
+	text-decoration-color: var(--maroon);
+}
+
+.access-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Header */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	background-color: rgba(255, 255, 255, 75%);
+	box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 10%);
+	transition: top 100ms linear, background-color 300ms ease-in-out;
+}
+
+.header:hover {
+	background-color: rgba(255, 255, 255, 100%);
+}
+
+.banner {
+	padding: 0.25rem 1rem;
+	background-color: var(--navy);
+	color: var(--white);
+	text-align: center;
+}
+
+.banner a {
+	color: var(--white);
+}
+
+.banner a:focus,
+.banner a:hover,
+.banner a:active {
+	text-decoration-color: var(--white);
+}
+
+.primary_logo {
+	margin: 0;
+}
+
+.primary_logo svg {
+	width: 200px;
+	max-width: 100%;
+	height: auto;
+}
+
+.nav_container {
+	max-width: 115rem;
+	padding: 0.5rem 1rem;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.scrolled .header {
+	top: -35px;
+	background-color: rgba(255, 255, 255, 100%);
+}
+
+/* Navigation */
+.menu_button {
+	display: none;
+}
+
+.main_nav,
+.main_social {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+/* Social Nav Icons */
+.main_social {
+	gap: 0.5rem;
+}
+
+.main_social a {
+	display: block;
+	padding: 0.75rem;
+	background-color: transparent;
+	border-radius: 5px;
+	transition: background-color 300ms ease-in-out;
+}
+
+.main_social svg {
+	width: 1.5rem;
+	height: 1.5rem;
+	fill: var(--black);
+	stroke: var(--black);
+	transition: all 300ms ease-in-out;
+}
+
+.main_social a:focus,
+.main_social a:hover,
+.main_social a:active {
+	background-color: var(--maroon);
+}
+
+.main_social a:focus svg,
+.main_social a:hover svg,
+.main_social a:active svg {
+	fill: var(--white);
+	stroke: var(--white);
+}
