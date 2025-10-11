@@ -23,6 +23,7 @@
 	--tan: #8c7669; /*large only*/
 	--maroon: #732020; /*all*/
 	--min-large: 1.16625rem; /*18.66px*/
+	--large-text: 1.5rem; /*24px*/
 }
 
 html {
@@ -68,8 +69,19 @@ svg {
 }
 
 button {
+	padding: 0;
 	border: none;
 	background-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Gilda Display", serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.25;
 }
 
 p {
@@ -98,6 +110,59 @@ a:active {
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
+}
+
+.secondary_heading {
+	font-size: 2rem;
+	margin: 1rem 0;
+}
+
+.tertiary_heading {
+	font-size: 1.5rem;
+	margin: 1rem 0 0;
+}
+
+.button {
+	display: inline-block;
+	padding: 1rem 2rem;
+	border: 2px solid var(--white);
+	color: var(--white);
+	font-size: 1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	border-radius: 50vh;
+	background-color: transparent;
+	text-shadow: none;
+	transition: all 300ms ease-in-out;
+}
+
+.button:focus,
+.button:hover,
+.button:active {
+	background-color: var(--white);
+	color: var(--black);
+}
+
+.wrap {
+	width: 100rem;
+	max-width: calc(100% - 4rem);
+	margin: 2rem auto;
+}
+
+@media (max-width: 960px) {
+	.wrap {
+		max-width: calc(100% - 2rem);
+		margin: 1rem auto;
+	}
+
+	.tertiary_heading {
+		margin: 0.5rem 0 0;
+	}
+
+	.button {
+		padding: 0.5rem 1rem;
+	}
 }
 
 /* Header */
@@ -150,7 +215,7 @@ a:active {
 }
 
 .nav_container {
-	max-width: 115rem;
+	max-width: 100rem;
 	padding: 0.5rem 1rem;
 	margin: 0 auto;
 	display: flex;
@@ -159,7 +224,7 @@ a:active {
 	align-items: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 960px) {
 	.header {
 		position: sticky;
 	}
@@ -326,7 +391,7 @@ a:active {
 /* Slider */
 .hero {
 	position: relative;
-	margin: 0 0 2rem;
+	margin: 0;
 	z-index: 0;
 }
 
@@ -342,13 +407,17 @@ ul.hero_slides {
 }
 
 li.slide {
+	/* display: flex;
+	flex-wrap: wrap;
+	align-content: center; */
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	inset: 0;
 	/* opacity: 0; */
-	pointer-events: none;
+	/* pointer-events: none; */
 	transition: opacity 300ms ease-in-out;
+	z-index: 1;
 }
 
 .slide .figure {
@@ -362,14 +431,6 @@ li.slide {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-}
-
-.hero_text-wrap {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: var(--white);
 }
 
 .slide_dots {
@@ -399,4 +460,138 @@ li.slide {
 
 .dot.active button {
 	background-color: var(--white);
+}
+
+.hero_text-wrap {
+	width: 768px;
+	max-width: calc(100% - 2rem);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: var(--white);
+	z-index: 2;
+}
+
+.hero_text-wrap .secondary_hero {
+	margin: 0;
+	font-size: clamp(1.5rem, 5vw, 4rem);
+	text-shadow: 3px 3px 3px rgba(0, 0, 0, 75%);
+}
+
+.hero_text-wrap p {
+	margin: clamp(0.5rem, 2.5vw, 2rem) 0;
+	font-size: clamp(1rem, 2vw, 1.5rem);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 75%);
+}
+
+@media (max-width: 960px) {
+	.hero {
+		margin: 0 0 1rem;
+	}
+
+	ul.hero_slides,
+	.slide .figure {
+		aspect-ratio: 16 / 9;
+	}
+
+	.slide_dots {
+		bottom: 0;
+	}
+
+	.dot button {
+		width: 0.75rem;
+		height: 0.75rem;
+	}
+}
+
+/* Card Section */
+.card_section .wrap {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.card .figure {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 8 / 5;
+}
+
+.card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 960px) {
+	.card_section .wrap {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.card_section .wrap {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+}
+
+/* Four Cards */
+.four_cards {
+	padding: 2rem 0;
+}
+
+.desc_wrap {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 0 0 2rem;
+}
+
+.four_cards .grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+}
+
+.grid_item {
+	text-align: center;
+}
+
+.grid_item .figure {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1;
+}
+
+.grid_item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.grid_item p {
+	padding: 0 1rem;
+}
+
+.grid_item p:first-of-type {
+	margin: 0 0 2rem;
+}
+
+.grid_item .button {
+	padding: 0.75rem 1.75rem;
+	border-color: var(--navy);
+	background-color: var(--navy);
+	color: var(--white);
+}
+
+.grid_item .button:focus,
+.grid_item .button:hover,
+.grid_item .button:active {
+	background-color: var(--white);
+	color: var(--navy);
 }
