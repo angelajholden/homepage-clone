@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+	const date = document.querySelector("#date");
+	const year = new Date().getFullYear();
+	if (date) {
+		date.textContent = year;
+	}
+
 	const body = document.querySelector("body");
 	const buttons = document.querySelectorAll(".menu_button");
 	const open = document.querySelector(".open_button");
