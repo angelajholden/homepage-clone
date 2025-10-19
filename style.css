@@ -50,6 +50,14 @@ body {
 	background-color: var(--white);
 }
 
+blockquote {
+	margin: 0;
+}
+
+cite {
+	display: block;
+}
+
 figure {
 	margin: 0;
 }
@@ -780,4 +788,107 @@ li.slide {
 /* Grid Section - Portrait */
 .portrait .grid_item .figure {
 	aspect-ratio: 9 / 16;
+}
+
+/* Testimonials */
+.testimonial {
+	padding: 2rem 0;
+	background-color: var(--tan);
+	color: var(--white);
+	font-size: var(--large-text);
+}
+
+.testimonial .wrap {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 4rem;
+}
+
+.testimonial .stars {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.block {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.quote_icon {
+	font-size: 8rem;
+	line-height: 0;
+	margin: 3rem 0 2rem;
+}
+
+.stars svg {
+	max-width: 100%;
+	fill: var(--white);
+}
+
+.testimonial img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 960px) {
+	.testimonial .wrap {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+}
+
+/* Instagram Grid */
+.instagram {
+	padding: 2rem 0;
+	text-align: center;
+}
+
+.instagram .wrap {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 1rem;
+}
+
+.instagram .figure {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1;
+}
+
+.instagram img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media (max-width: 960px) {
+	.instagram .wrap {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.5rem;
+	}
+}
+
+/* About Us */
+.about_us {
+	padding: 2rem 0;
+	text-align: center;
+	background-color: var(--navy);
+	color: var(--white);
+}
+
+.about_us svg {
+	width: 350px;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	fill: var(--white);
+}
+
+.about_us p {
+	margin: clamp(1rem, 2.5vw, 2rem) 0;
 }
