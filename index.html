@@ -73,11 +73,6 @@
 		</header>
 		<main class="main">
 			<section class="hero">
-				<ul class="slide_dots">
-					<li class="dot active"><button type="button" aria-pressed="true" aria-label="Slide 1"></button></li>
-					<li class="dot"><button type="button" aria-pressed="false" aria-label="Slide 2"></button></li>
-					<li class="dot"><button type="button" aria-pressed="false" aria-label="Slide 3"></button></li>
-				</ul>
 				<ul class="hero_slides">
 					<li class="slide">
 						<figure class="figure"><img src="images/fiber-and-kraft.jpg" alt="Colorful skeins of yarn on a tabletop." /></figure>
@@ -104,6 +99,23 @@
 						</div>
 					</li>
 				</ul>
+				<ul role="tablist" aria-label="Hero slides" class="slide_dots">
+					<li class="dot active">
+						<button type="button" aria-pressed="true" aria-label="Slide 1">
+							<div aria-hidden="true" class="circle"></div>
+						</button>
+					</li>
+					<li class="dot">
+						<button type="button" aria-pressed="false" aria-label="Slide 2">
+							<div aria-hidden="true" class="circle"></div>
+						</button>
+					</li>
+					<li class="dot">
+						<button type="button" aria-pressed="false" aria-label="Slide 3">
+							<div aria-hidden="true" class="circle"></div>
+						</button>
+					</li>
+				</ul>
 			</section>
 			<div id="categories" class="anchor_point"></div>
 			<section class="card_section">
@@ -114,69 +126,42 @@
 						<figure class="figure"><img src="images/yarn-stash.jpg" alt="Bookshelf with yarn and works in progress knitting projects." /></figure>
 						<h3 class="tertiary_heading">Knitting</h3>
 						<p>I knit a shawl years ago but hadn't knit anything since. Then a friend asked me to go to a knitting class with her and I was all in.</p>
-						<p>
-							<a href="#">Shop Now</a>
-							<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100" /></svg>
-						</p>
 					</article>
 					<article class="card">
 						<figure class="figure"><img src="images/watermelon-sock.jpg" alt="Hand knit sock with watermelon colors and yarn." /></figure>
 						<h3 class="tertiary_heading">Sock Knitting</h3>
 						<p>This deserves its own category. I couldn't believe that people actually knit socks. It took me a year to knit my first pair.</p>
-						<p>
-							<a href="#">Shop Now</a>
-							<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100" /></svg>
-						</p>
 					</article>
 					<article class="card">
 						<figure class="figure"><img src="images/granny-square-crochet-blanket.jpg" alt="Granny square blanket work in progress." /></figure>
 						<h3 class="tertiary_heading">Crocheting</h3>
 						<p>I decided to crochet when I started following Instagram accounts featuring granny squares and granny stripe blankets.</p>
-						<p>
-							<a href="#">Shop Now</a>
-							<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100" /></svg>
-						</p>
 					</article>
 					<article class="card">
 						<figure class="figure"><img src="images/merino-malabrigo-single.jpg" alt="Merino Malabrigo hand spun single on a bobbin." /></figure>
 						<h3 class="tertiary_heading">Spinning</h3>
 						<p>Spinning was one of the hardest things I've tried! I was determined to learn to make my own yarn to knit and crochet with.</p>
-						<p>
-							<a href="#">Shop Now</a>
-							<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100" /></svg>
-						</p>
 					</article>
 					<article class="card">
 						<figure class="figure"><img src="images/yarn-dyeing-color-wheel.jpg" alt="Twleve color wheel acid dyes for yarn dyeing." /></figure>
 						<h3 class="tertiary_heading">Hand Dyeing</h3>
 						<p>I turned my kitchen into a science lab every weekend for months to practice hand dyeing yarn.</p>
-						<p>
-							<a href="#">Shop Now</a>
-							<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100" /></svg>
-						</p>
 					</article>
 					<article class="card">
 						<figure class="figure"><img src="images/finn-fleece-combed-spun.jpg" alt="Washed, combed and hand spun Finn fleece mini skein." /></figure>
 						<h3 class="tertiary_heading">Processing Wool</h3>
 						<p>My next task is to wash and process three fleeces in my stash. I've learned to make bats and spin from a bat, too.</p>
-						<p>
-							<a href="#">Shop Now</a>
-							<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100" /></svg>
-						</p>
 					</article>
 				</div>
 			</section>
-			<section id="top-yarns" class="four_cards">
+			<div id="top-yarns" class="anchor_point"></div>
+			<section class="four_cards">
 				<div class="wrap">
 					<div class="desc_wrap">
 						<div class="desc">
 							<h2 class="secondary_heading">Top Yarns From My Stash</h2>
 							<p>I love all my yarn, but some I love just a little bit more.</p>
 						</div>
-						<p class="cta">
-							<a href="#">Shop Category</a>
-							<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100" /></svg>
-						</p>
 					</div>
 					<div class="grid square">
 						<article class="grid_item">
@@ -214,7 +199,8 @@
 					</div>
 				</div>
 			</section>
-			<section id="featured" class="full_width">
+			<div id="featured" class="anchor_point"></div>
+			<section class="full_width">
 				<figure class="figure">
 					<img src="images/tweed-fiber.jpg" alt="Colorful yarn" />
 				</figure>
@@ -229,7 +215,8 @@
 					<p><a class="button navy" href="https://www.knitpicks.com/yarn/high-desert-tweed-roving-bare-yarn/c/5420509" target="_blank">High Desert Tweed</a></p>
 				</div>
 			</section>
-			<section id="links" class="links">
+			<div id="links" class="anchor_point"></div>
+			<section class="links">
 				<h2 class="secondary_heading">My Favorite Places to Buy Fiber + Yarn</h2>
 				<nav class="nav_links wrap">
 					<a class="button yellow" href="https://www.knitpicks.com/" target="_blank">Knit Picks</a>
@@ -242,17 +229,14 @@
 					<a class="button yellow" href="https://www.knomadyarn.com/" target="_blank">Knomad Yarn</a>
 				</nav>
 			</section>
-			<section id="favorites" class="four_cards">
+			<div id="favorites" class="anchor_point"></div>
+			<section class="four_cards">
 				<div class="wrap">
 					<div class="desc_wrap">
 						<div class="desc">
 							<h2 class="secondary_heading">My Favorite Instagram Profiles</h2>
 							<p>Knitters, crocheters and dyers on Instagram are an endless source of inspiration.</p>
 						</div>
-						<p class="cta">
-							<a href="#">Shop Category</a>
-							<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M268 112l144 144-144 144M392 256H100" /></svg>
-						</p>
 					</div>
 					<div class="grid portrait">
 						<article class="grid_item">
@@ -290,15 +274,11 @@
 					</div>
 				</div>
 			</section>
-			<div id="patterns" class="testimonial">
+			<div id="patterns" class="anchor_point"></div>
+			<section class="testimonial">
 				<div class="wrap">
 					<div class="block">
 						<h2 class="secondary_heading">Featured Pattern: I'm So Basic Socks by Summer Lee</h2>
-						<blockquote>
-							<p class="quote_icon">&#8223;</p>
-							<p>This free pattern will teach you how to knit a basic sock using the Magic Loop method!</p>
-							<p>The basic sock is a work of structural knitting genius. It looks far more complicated to make than it actually is, and once you get the hang of the construction, you'll find yourself knitting more pairs than you know what to do with!</p>
-						</blockquote>
 						<div aria-hidden="true" class="stars">
 							<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z" /></svg>
 							<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z" /></svg>
@@ -306,7 +286,11 @@
 							<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z" /></svg>
 							<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M394 480a16 16 0 01-9.39-3L256 383.76 127.39 477a16 16 0 01-24.55-18.08L153 310.35 23 221.2a16 16 0 019-29.2h160.38l48.4-148.95a16 16 0 0130.44 0l48.4 149H480a16 16 0 019.05 29.2L359 310.35l50.13 148.53A16 16 0 01394 480z" /></svg>
 						</div>
-						<cite>&mdash; Summer Lee</cite>
+						<blockquote>
+							<p>This free pattern will teach you how to knit a basic sock using the Magic Loop method!</p>
+							<p>The basic sock is a work of structural knitting genius. It looks far more complicated to make than it actually is, and once you get the hang of the construction, you'll find yourself knitting more pairs than you know what to do with!</p>
+							<cite>&mdash; Summer Lee</cite>
+						</blockquote>
 						<p>
 							<a class="button" href="https://www.ravelry.com/patterns/library/im-so-basic-socks" target="_blank">Download on Ravelry</a>
 						</p>
@@ -315,7 +299,7 @@
 						<img src="images/basic-vanilla-socks.jpg" alt="A pair of hand knit socks on sock blockers." />
 					</figure>
 				</div>
-			</div>
+			</section>
 			<section class="instagram">
 				<h2 class="secondary_heading">Follow on Instagram</h2>
 				<p><a class="button maroon" href="https://www.instagram.com/fiberandkraft" target="_blank">@fiberandkraft</a></p>
@@ -340,7 +324,8 @@
 					</figure>
 				</div>
 			</section>
-			<section id="about-us" class="about_us">
+			<div id="about-us" class="anchor_point"></div>
+			<section class="about_us">
 				<div class="wrap">
 					<svg aria-hidden="true" width="100%" height="100%" viewBox="0 0 924 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2">
 						<g transform="matrix(1,0,0,1,-728.034,-302.414)">
@@ -358,11 +343,7 @@
 						</g>
 					</svg>
 					<h2 class="secondary_heading">About Me</h2>
-					<p>
-						My name is Angela, and I'm a software engineer in Saint Paul, Minnesota.
-						<br />
-						Fiber &amp; Kraft is a side project where I talk about knitting, crocheting, spinning, yarn dyeing and anything related to wool and fiber.
-					</p>
+					<p>My name is Angela, and I'm a software engineer in Saint Paul, Minnesota. Fiber &amp; Kraft is a side project where I talk about knitting, crocheting, spinning, yarn dyeing and anything related to wool and fiber.</p>
 					<p><a class="button" href="https://www.youtube.com/@fiberandkraft?sub_confirmation=1" target="_blank">Subscribe on YouTube</a></p>
 				</div>
 			</section>
