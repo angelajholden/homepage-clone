@@ -593,7 +593,7 @@ li.slide.active {
 	transform: translate(-50%, -50%);
 	text-align: center;
 	color: var(--white);
-	background-color: rgba(0, 0, 0, 65%);
+	background-color: rgba(2, 40, 89, 75%);
 	z-index: 2;
 }
 
@@ -1005,6 +1005,7 @@ li.slide.active {
 	height: auto;
 	margin: 0 auto;
 	fill: var(--white);
+	stroke: var(--white);
 }
 
 .about_us p {
